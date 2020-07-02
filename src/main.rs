@@ -8,7 +8,7 @@ fn main() {
         req_text = req.text().expect("Erro obtendo response text");
         println!("body = {}", req_text);
     } else {
-        // req_text = String::from("lolo");
+        // req_text = String::from("");
         print!("Status: {}", req.status())
     }
 }
