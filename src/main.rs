@@ -1,8 +1,8 @@
 extern crate reqwest;
 
 fn main() {
-    let url = "https://puppygifs.tumblr.com/api/read/json";
-    let mut req = reqwest::get(url).expect("Erro na requisição GET");
+    let url = "http://httpbin.org/anything";
+    let req = reqwest::blocking::get(url).expect("Erro na requisição GET");
     let req_text;
     if req.status().is_success() {
         req_text = req.text().expect("Erro obtendo response text");
